@@ -1,0 +1,60 @@
+/* ASIDE */
+.aside-container{
+    display: flex;
+    flex-direction: column;
+}
+.aside-container .aside .entrega-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 230px;
+    height: 60px;
+    border-radius: 5px;
+    gap: 5px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.aside-container .aside .promotion-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 230px;
+    height: 60px;
+    border-radius: 5px;
+    gap: 5px;
+    padding: 15px;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+}
+.main-container{
+    display: flex;
+    margin: 20px 90px 20px 90px;
+    gap: 40px;
+}
+
+.aside-container .aside .filter{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aside-container .aside .filters{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-container .aside .filters input{
+    margin-right: 5px;
+}
+
+.aside-container .aside .filter-aside{
+    margin-top: 20px;
+}
+

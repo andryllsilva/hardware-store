@@ -1,0 +1,168 @@
+html{
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+
+
+body{
+    background-color: #E1E8F0;
+}
+/* HEADER */
+
+.header{
+    background-color: white;
+}
+
+.header .header-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header-container h1{
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #4F4BBF;
+}
+
+.header .header-container #busca{
+    border: 1px ;
+    border-radius: 50px;
+    width: 500px;
+    box-shadow: 0px 1px 5px rgb(157, 156, 156);
+    height: 25px;
+    margin-top: 10px;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    padding: 10px;
+}
+
+.header .cart-container{
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header .cart{
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.header .cart .contagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: 0;
+}
+
+.header .cart .contagem p{
+    font-size: 15px;
+    color: white;
+}
+
+.header .cart img{
+    width: 25px;
+    color: #E1E8F0;
+}
+
+/* PRODUCT */
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+.product{
+    display: flex;
+    background-color: white;
+    border-radius: 7px;
+    grid-template-columns: repeat(3,1fr);
+    width: 300px;
+    padding: 20px;
+    position: relative;
+}
+
+.product .nome-produto{
+    margin-bottom: 10px;
+}
+
+.product img{
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.product .oldprice{
+    display: flex;
+    gap: 10px;
+}
+
+.product .oldprice .oldpricecard{
+    text-decoration: line-through;
+}
+
+
+.product .newprice{
+    display: flex;
+    flex-direction: column;
+}
+
+.product .price .cor-venda{
+    color: var(--color)
+}
+
+.product .price .pricecard{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product .price .oldprice{
+    margin-top: 10px;
+}
+
+.product .price .newprice .entrega-gratis{
+    margin: 10px 0px;
+}
+
+button{
+    width: 250px;
+    height: 30px;
+    background-color: #4438CA ;
+    border: none;
+    border-radius: 5px ;
+    font-weight: bold;
+    color: white;
+}
+
+.product .btn-cart{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    border-top: 6px solid white;
+    box-shadow: 10px 0px 100px white;
+    bottom: 10px;
+}
+
+
