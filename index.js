@@ -22,7 +22,7 @@ const products = [
         newPrice: 4500,
         oldPrice: 6500,
         description: "Neque porro quisquam est qui dolorem ipsum quia dolor",
-        delivery: true,
+        delivery: false,
         image: 'placadevideo.jpg'
     },
 
@@ -40,7 +40,7 @@ const products = [
         newPrice: 420,
         oldPrice: 600,
         description: "Neque porro quisquam est qui dolorem ipsum quia dolor",
-        delivery: false,
+        delivery: true,
         image: 'reddragon.jpg'
     },
 
@@ -61,7 +61,30 @@ const products = [
 function inicializarLoja(){
     const productContainer = document.querySelector('.product-container')
     products.map((val) =>{
-        productContainer.innerHTML += `<div class="product">        
+        if(val.delivery == true){
+            productContainer.innerHTML += `<div class="product">        
+                                            <a href="/">
+                                                <img src="./src/images/${val.image}" alt="placa de video">
+                                                <div class="nome-produto">
+                                                    <h2>${val.name}</h2>
+                                                </div>
+                                                <div class="price">
+                                                    <div class="oldprice">
+                                                        <span class="oldpricecard">R$ ${val.oldPrice}</span>
+                                                        <span class="desconto cor-venda">${val.descount}%</span>
+                                                    </div>
+                                                    <div class="newprice">
+                                                        <span class="pricecard cor-venda">R$ ${val.newPrice}</span>
+                                                        <p>${val.description}</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="btn-cart">
+                                                <button>Adicionar ao carrinho</button>
+                                            </div>
+                                        </div>`
+        }else{
+            productContainer.innerHTML += `<div class="product">        
                                             <a href="/">
                                                 <img src="./src/images/${val.image}" alt="placa de video">
                                                 <div class="nome-produto">
@@ -80,6 +103,7 @@ function inicializarLoja(){
                                                 </div>
                                             </a>
                                         </div>`
+        }
     })
 }
     
