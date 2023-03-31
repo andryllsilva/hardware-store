@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -31,11 +32,10 @@
             <div class="cart-container">
                 <a href="">
                     <div class="cart">
-                        <div class="contagem">
-                            <p>0</p>
-                        </div>
-                        <img src="/src/images/pngfind.com-cart-image-png-1464860.png" alt="carrinho">
+                        
+                        
                     </div>
+                    <i class="fa fa-shopping-cart"></i>
                 </a>
             </div>
         </div>
@@ -46,19 +46,19 @@
             <div class="aside-container">
                 <aside class="aside">
                     <div class="promotion-container">
-                        <span class="filter">Promoções</span>
-                        <input type="checkbox" name="" id="">
+                        <label for="promotion"><span class="filter">Promoções</span></label>
+                        <input type="checkbox"  id="promotion">
                     </div>
                     <div class="entrega-container">
                         <span class="filter">Entrega grátis</span>
-                        <input type="checkbox" name="" id="">
+                        <input type="checkbox" id="delivery" value="delivery" checked>
                     </div>
 
                     <div class="marca filter-aside">
                         <h3>Marcas</h3>
                         <div class="filters">
                             <ul>
-                                <li><input type="checkbox" name="" id=""> Evga
+                                <li><input type="checkbox" name="" id=""> Evga</li>
                                 <li><input type="checkbox" name="" id=""> Redgragon</li>
                                 <li><input type="checkbox" name="" id=""> Hyper fury</li>
                                 <li><input type="checkbox" name="" id=""> Other</li>
@@ -106,7 +106,7 @@
         </div>
         </div>
     </main>
-    <script src="./index.js"></script>
+    <script type="module" src="src/scripts/index.js"></script>
 </body>
 
 </html>

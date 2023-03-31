@@ -69,7 +69,7 @@ textarea:focus, input:focus {
     border-radius: 50%;
     width: 15px;
     height: 15px;
-    top: 0;
+    top: 30%;
     right: 0;
 }
 
@@ -78,9 +78,9 @@ textarea:focus, input:focus {
     color: white;
 }
 
-.header .cart img{
+.header  i{
     width: 25px;
-    color: #E1E8F0;
+    font-size: 25px;
 }
 
 /* PRODUCT */
@@ -163,13 +163,15 @@ button{
     height: 75px;
     border-top: 6px solid white;
     box-shadow: 10px 0px 100px white;
-    bottom: 10px;
+    bottom: 0px;
+    overflow: hidden;
     opacity: 0;
     transition: 0.3s;
 }
 
 .btn-cart:hover{
     opacity: 1;
+    bottom: 10px;
 }
 
 
