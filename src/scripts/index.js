@@ -34,24 +34,22 @@ for(var i = 0; i < buttonsCart.length; i++){
     })
 }
 
+const checkBoxDelivery = document.querySelector('#delivery')
 
-function checkDelivery(){
+checkBoxDelivery.addEventListener('change', () => {
     const cardProducts = document.querySelectorAll('.product')
-    const checkBoxDelivery = document.querySelector('#promotion')
     for (let i = 0; i < cardProducts.length; i++) {
-        const product = cardProducts[i];
-        const entrega = document.querySelector('.entrega-gratis').textContent
-        console.log(entrega)
+        const divProduct = cardProducts[i]
+        const product = products[i];
+        const entrega = product.delivery
         if(checkBoxDelivery.checked){
-            if(entrega === 'Entrega grátis'){
-                product.style.display = 'block'
+            if(entrega === true){
+                divProduct.style.display = 'block'
             } else{
-                product.style.display = 'none'
+                divProduct.style.display = 'none'
             }
         }else{
-            product.style.display = 'block'
+            divProduct.style.display = 'block'
         }
     }
-}
-
-checkDelivery()
+})

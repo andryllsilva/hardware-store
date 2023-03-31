@@ -99,6 +99,7 @@ textarea:focus, input:focus {
     width: 300px;
     padding: 20px;
     position: relative;
+    max-height: 470px;
 }
 
 .product .nome-produto{
