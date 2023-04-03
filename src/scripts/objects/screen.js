@@ -52,3 +52,18 @@ const screen = {
 }
 
 export { screen } 
+
+
+function updateCart(){
+    let counter = 0
+    const counterContainer = document.querySelector('.cart')
+    products.map(val => {
+        if(val.amount > 0){
+            counter += val.amount
+            counterContainer.innerHTML = `<div class="contagem">
+                                            <p>${counter}</p>
+                                        </div>
+                                            `
+        }
+    })
+}
