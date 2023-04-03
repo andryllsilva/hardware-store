@@ -3,8 +3,8 @@
         {
             "name": "Product name A",
             "id": 0,
-            "price": 4500,
-            "oldPrice": 6500,
+            "price": 4500.00,
+            "oldPrice": 6500.00,
             "description": "Neque porro quisquam est qui dolorem ipsum quia dolor",
             "delivery": true,
             "image": "src/images/placadevideo.jpg",
@@ -14,8 +14,8 @@
         {
             "name": "Product name A",
             "id": 1,
-            "newPrice": 4500,
-            "oldPrice": 6500,
+            "price": 4500.00,
+            "oldPrice": 6500.00,
             "description": "Neque porro quisquam est qui dolorem ipsum quia dolor",
             "delivery": true,
             "image": "src/images/placadevideo.jpg",
@@ -26,8 +26,8 @@
         {
             "name": "Product name A",
             "id": 2,
-            "newPrice": 4500,
-            "oldPrice":  6500,
+            "price": 4500.00,
+            "oldPrice":  6500.00,
             "description": "Neque porro quisquam est qui dolorem ipsum quia dolor",
             "delivery": false,
             "image": "src/images/placadevideo.jpg",
@@ -37,11 +37,11 @@
         {
             "name": "KeyBoard Redragon",
             "id": 3,
-            "newPrice": 420,
-            "oldPrice": 600,
+            "price": 420.00,
+            "oldPrice": 600.00,
             "description": "Neque porro quisquam est qui dolorem ipsum quia dolor",
             "delivery": false,
-            "image": "reddragon.jpg",
+            "image": "src/images/reddragon.jpg",
             "promotion": true,
             "amount": 0
         },
@@ -49,11 +49,11 @@
         {
             "name": "KeyBoard Redragon",
             "id": 4,
-            "newPrice": 420,
-            "oldPrice":  600,
+            "price": 420.00,
+            "oldPrice":  600.00,
             "description": "Neque porro quisquam est qui dolorem ipsum quia dolor",
             "delivery": true,
-            "image": "reddragon.jpg",
+            "image": "src/images/reddragon.jpg",
             "promotion": true,
             "amount": 0
         },
@@ -61,11 +61,11 @@
         {
             "name": "KeyBoard Redragon",
             "id": 5,
-            "newPrice": 420,
-            "oldPrice": 600,
+            "price": 420.00,
+            "oldPrice": 600.00,
             "description": "Neque porro quisquam est qui dolorem ipsum quia dolor",
             "delivery": false,
-            "image": "reddragon.jpg",
+            "image": "src/images/reddragon.jpg",
             "amount": 0,
             "promotion": false
         }
