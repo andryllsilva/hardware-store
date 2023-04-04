@@ -9,7 +9,8 @@
             "delivery": true,
             "image": "src/images/placadevideo.jpg",
             "promotion": true,
-            "amount": 0
+            "type": "Graphic Card",
+            "brand": "Other"
         },
         {
             "name": "Product name A",
@@ -20,7 +21,8 @@
             "delivery": true,
             "image": "src/images/placadevideo.jpg",
             "promotion": false,
-            "amount": 0
+            "type": "Graphic Card",
+            "brand": "Other"
         },
     
         {
@@ -32,7 +34,8 @@
             "delivery": false,
             "image": "src/images/placadevideo.jpg",
             "promotion": true,
-            "amount": 0
+            "type": "Graphic Card",
+            "brand": "Other"
         },
         {
             "name": "KeyBoard Redragon",
@@ -43,7 +46,8 @@
             "delivery": false,
             "image": "src/images/reddragon.jpg",
             "promotion": true,
-            "amount": 0
+            "type": "Keyboard",
+            "brand": "Redragon"
         },
     
         {
@@ -55,7 +59,8 @@
             "delivery": true,
             "image": "src/images/reddragon.jpg",
             "promotion": true,
-            "amount": 0
+            "type": "Keyboard",
+            "brand": "Redragon"
         },
     
         {
@@ -66,8 +71,9 @@
             "description": "Neque porro quisquam est qui dolorem ipsum quia dolor",
             "delivery": false,
             "image": "src/images/reddragon.jpg",
-            "amount": 0,
-            "promotion": false
+            "promotion": false,
+            "type": "Keyboard",
+            "brand": "Redragon"
         }
     ]
 }

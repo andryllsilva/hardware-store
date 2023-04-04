@@ -5,9 +5,16 @@ fetch("src/scripts/objects/products.json")
 
         // Seleciona os elementos HTML necessários
         const products = data.products;
-        const produtosSection = document.querySelector(".product-container");
-        const entregaGratisCheckbox = document.getElementById('delivery');
-        const promocaoCheckbox = document.getElementById("promotion");
+        const produtosSection = document.querySelector(".product-container")
+        const freeDeliveryCheckbox = document.getElementById('delivery')
+        const promotionCheckbox = document.getElementById("promotion")
+        const redragonCheckbox = document.getElementById("redragon")
+        const keyboardCheckbox = document.getElementById("keyboard")
+        const otherCheckbox = document.getElementById("other-checkbox")
+        const graphicCardCheckbox = document.getElementById("graphic-card")
+
+        // Contador para os produtos do carrinho fora da função para não resetar toda vez que marcar algum filtro
+        let cartCount = 0
 
         // Função para exibir os produtos com base nos filtros selecionados
         function startShop() {
@@ -15,10 +22,22 @@ fetch("src/scripts/objects/products.json")
             produtosSection.innerHTML = "";
             const produtosFiltrados = products.filter(produto => {
                 let atendeFiltros = true;
-                if (entregaGratisCheckbox.checked && !produto.delivery) {
+                if (freeDeliveryCheckbox.checked && !produto.delivery) {
                     atendeFiltros = false;
                 }
-                if (promocaoCheckbox.checked && !produto.promotion) {
+                if (promotionCheckbox.checked && !produto.promotion) {
+                    atendeFiltros = false;
+                }
+                if (redragonCheckbox.checked && produto.brand != "Redragon") {
+                    atendeFiltros = false;
+                }
+                if (keyboardCheckbox.checked && produto.type != "Keyboard") {
+                    atendeFiltros = false;
+                }
+                if (otherCheckbox.checked && produto.brand != "Other") {
+                    atendeFiltros = false;
+                }
+                if (graphicCardCheckbox.checked && produto.type != "Graphic Card") {
                     atendeFiltros = false;
                 }
 
@@ -32,7 +51,7 @@ fetch("src/scripts/objects/products.json")
 
                 const linkProduct = document.createElement("a")
                 linkProduct.classList.add("link-product")
-                linkProduct.setAttribute("href","#")
+                linkProduct.setAttribute("href", "#")
                 const imagem = document.createElement("img");
                 imagem.src = produto.image;
                 linkProduct.appendChild(imagem)
@@ -44,15 +63,15 @@ fetch("src/scripts/objects/products.json")
 
                 const price = document.createElement("p");
                 price.classList.add("price");
-                price.setAttribute("id","discount")
+                price.setAttribute("id", "discount")
                 price.textContent = `R$ ${produto.price.toFixed(2)}`;
                 if (produto.promotion) {
                     const divPromotion = document.createElement("div")
                     divPromotion.classList.add("promotion")
                     const oldPrice = document.createElement("p")
-                    oldPrice.setAttribute("id","oldPrice")
+                    oldPrice.setAttribute("id", "oldPrice")
                     const discount = document.createElement("p")
-                    discount.setAttribute("id","discount")
+                    discount.setAttribute("id", "discount")
                     oldPrice.textContent = `R$ ${produto.oldPrice.toFixed(2)}`
                     discount.textContent = `30%`
                     divPromotion.appendChild(oldPrice)
@@ -65,12 +84,12 @@ fetch("src/scripts/objects/products.json")
                     const freeDelivery = document.createElement("p");
                     freeDelivery.textContent = "Entrega Grátis";
                     freeDelivery.classList.add("free-delivery");
-                    freeDelivery.setAttribute("id","discount")
+                    freeDelivery.setAttribute("id", "discount")
                     produtoDiv.appendChild(freeDelivery);
                 }
 
                 const description = document.createElement("p");
-                description.setAttribute("id","description")
+                description.setAttribute("id", "description")
                 description.textContent = produto.description;
                 produtoDiv.appendChild(description);
 
@@ -92,11 +111,32 @@ fetch("src/scripts/objects/products.json")
                 produtosSection.appendChild(mensagem);
             }
 
-            
+            function updateCart() {
+                const btnBuyCart = document.querySelectorAll(".buy-btn")
+                const cartCounter = document.getElementById("cart-counter")
+
+                btnBuyCart.forEach(button => {
+                    button.addEventListener("click", () => {
+                        cartCount++
+                        cartCounter.textContent = cartCount
+                    })
+                })
+            }
+
+            updateCart()
         }
         startShop()
 
-         // Adiciona eventos para atualizar os produtos quando os filtros são alterados
-        entregaGratisCheckbox.addEventListener("change", startShop);
-        promocaoCheckbox.addEventListener("change", startShop);
+
+
+
+
+        // Adiciona eventos para atualizar os produtos quando os filtros são alterados
+        
+        freeDeliveryCheckbox.addEventListener("change", startShop);
+        promotionCheckbox.addEventListener("change", startShop);
+        redragonCheckbox.addEventListener("change", startShop)
+        keyboardCheckbox.addEventListener("change", startShop)
+        otherCheckbox.addEventListener("change", startShop)
+        graphicCardCheckbox.addEventListener("change", startShop)
     })

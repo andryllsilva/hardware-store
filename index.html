@@ -8,9 +8,10 @@
     <title>Hardware</title>
 
     <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/aside.css">
     <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/product.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,18 +27,15 @@
 
             <div class="search">
                 <p>Busque seu produto</p>
-                <input type="search" id="busca">
+                <input type="search" id="search">
             </div>
 
-            <div class="cart-container">
-                <a href="">
-                    <div class="cart">
-                        
-                        
-                    </div>
-                    <i class="fa fa-shopping-cart"></i>
-                </a>
-            </div>
+
+            <a class="cart-container" href="">
+                <span id="cart-counter">0</span>
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+
         </div>
     </header>
 
@@ -47,7 +45,7 @@
                 <aside class="aside">
                     <div class="promotion-container">
                         <label class="filter" for="promotion">Promoções</label>
-                        <input type="checkbox"  id="promotion">
+                        <input type="checkbox" id="promotion">
                     </div>
                     <div class="entrega-container">
                         <label class="filter">Entrega grátis</label>
@@ -59,11 +57,10 @@
                         <div class="filters">
                             <ul>
                                 <li><input type="checkbox" name="" id=""> Evga</li>
-                                <li><input type="checkbox" name="" id=""> Redgragon</li>
                                 <li><input type="checkbox" name="" id=""> Hyper fury</li>
-                                <li><input type="checkbox" name="" id=""> Other</li>
+                                <li><input type="checkbox" name="" id="other-checkbox"> Other</li>
                                 <li><input type="checkbox" name="" id=""> Msi</li>
-                                <li><input type="checkbox" name="" id=""> Redragon</li>
+                                <li><input type="checkbox" name="" id="redragon"> Redragon</li>
                                 <li><input type="checkbox" name="" id=""> Corsair</li>
                                 </li>
                             </ul>
@@ -86,8 +83,8 @@
                         <h3 class="Categorias">Categorias</h3>
                         <div class="filters">
                             <ul>
-                                <li><input type="checkbox" name="" id=""> Placa de video
-                                <li><input type="checkbox" name="" id=""> Teclado</li>
+                                <li><input type="checkbox" name="" id="graphic-card"> Placa de video
+                                <li><input type="checkbox" name="" id="keyboard"> Teclado</li>
                                 <li><input type="checkbox" name="" id=""> Headset</li>
                                 <li><input type="checkbox" name="" id=""> Jogo</li>
                                 </li>
@@ -100,10 +97,6 @@
 
             <div class="product-container">
             </div>
-
-
-
-        </div>
         </div>
     </main>
     <script type="module" src="src/scripts/index.js"></script>

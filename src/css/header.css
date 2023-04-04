@@ -1,0 +1,77 @@
+html{
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+
+
+body{
+    background-color: #E1E8F0;
+}
+/* HEADER */
+
+.header{
+    background-color: white;
+}
+
+.header .header-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header-container h1{
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #4F4BBF;
+}
+
+.header .header-container #search{
+    border: 1px ;
+    border-radius: 50px;
+    width: 500px;
+    box-shadow: 0px 1px 5px rgb(157, 156, 156);
+    height: 25px;
+    margin-top: 10px;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    padding: 10px;
+}
+
+.header .cart-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+#cart-counter {
+    position: absolute;
+    top: 2px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.header  i{
+    width: 25px;
+    font-size: 25px;
+}
+
+
+
+
+
+
